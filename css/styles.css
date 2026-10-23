@@ -859,6 +859,7 @@ main > .section.section-lavender:first-of-type {
 }
 
 .craft-banner {
+  position: relative;
   border-radius: 28px;
   background: linear-gradient(145deg, #4d3368 0%, #3a2550 52%, #322048 100%);
   padding: 1.75rem 1.35rem 2rem;
@@ -867,6 +868,17 @@ main > .section.section-lavender:first-of-type {
   color: var(--white);
   overflow: hidden;
   box-shadow: var(--shadow);
+}
+
+.craft-ring {
+  position: absolute;
+  z-index: 2;
+  left: 26%;
+  bottom: -30%;
+  width: min(250px, 24%);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
 }
 
 .craft-intro {
@@ -1373,7 +1385,8 @@ main > .section.section-lavender:first-of-type {
 
 .page-plp .keep-banner .links svg,
 .page-plp .keep-banner .keep-icon,
-.page-pdp .keep-banner .links svg {
+.page-pdp .keep-banner .links svg,
+.page-pdp .keep-banner .keep-icon {
   width: 34px;
   height: 34px;
   flex-shrink: 0;
@@ -2065,9 +2078,11 @@ main > .section.section-lavender:first-of-type {
 }
 
 .pdp-ctas .secondary .btn svg,
-.trust-row svg {
-  width: 14px;
-  height: 14px;
+.pdp-ctas .secondary .btn img,
+.trust-row svg,
+.trust-row img {
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
 }
 
@@ -2272,7 +2287,8 @@ main > .section.section-lavender:first-of-type {
   font-weight: 500;
 }
 
-.details-help-actions svg {
+.details-help-actions svg,
+.details-help-actions img {
   width: 16px;
   height: 16px;
 }
@@ -2939,17 +2955,26 @@ main > .section.section-lavender:first-of-type {
   }
 
   .craft-banner {
-    width: min(1080px, 100%);
-    max-width: 1080px;
+    width: min(1120px, 100%);
+    max-width: 1120px;
     aspect-ratio: auto;
     height: auto;
     margin-inline: auto;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: clamp(1.25rem, 2.2vw, 2.25rem);
-    align-items: start;
-    padding: clamp(1.75rem, 2.5vw, 2.5rem) clamp(2rem, 3vw, 2.75rem);
-    border-radius: 40px;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: 1.25rem 1.5rem;
+    align-items: stretch;
+    padding: 2.35rem 2.5rem 2.15rem 2.65rem;
+    border-radius: 28px;
+    background: #413066;
     box-sizing: border-box;
+    min-height: 430px;
+  }
+
+  .craft-ring {
+    left: 25.5%;
+    bottom: -86px;
+    width: 276px;
+    z-index: 3;
   }
 
   .craft-intro {
@@ -2960,42 +2985,89 @@ main > .section.section-lavender:first-of-type {
     min-height: 0;
     height: 100%;
     padding-bottom: 0;
-  }
-
-  .craft-title {
-    font-size: clamp(1.5rem, 2.2vw, 1.875rem);
-    margin-bottom: 0.875rem;
-  }
-
-  .craft-lead {
-    font-size: 0.75rem;
-    max-width: none;
-    line-height: 1.6;
-  }
-
-  .craft-feature {
-    margin-top: 0;
-    padding-top: 0.65rem;
     z-index: 2;
   }
 
+  .craft-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 0.85rem;
+  }
+
+  .craft-title {
+    font-size: clamp(2.15rem, 3.1vw, 2.7rem);
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    line-height: 0.98;
+    margin-bottom: 0.95rem;
+  }
+
+  .craft-lead {
+    font-size: 0.78rem;
+    max-width: none;
+    line-height: 1.55;
+    opacity: 0.9;
+  }
+
+  .craft-feature {
+    margin-top: auto;
+    padding-top: 1.35rem;
+    z-index: 4;
+    gap: 0.05rem;
+  }
+
   .craft-feature-num {
-    font-size: clamp(3.25rem, 5vw, 4.5rem);
+    font-size: clamp(5.4rem, 7.2vw, 6.6rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 0.8;
+  }
+
+  .craft-feature-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.25;
   }
 
   .technique-list {
-    gap: clamp(0.5rem, 0.85vw, 0.75rem);
-    padding-top: 0;
-    align-content: start;
+    gap: 1.05rem;
+    padding-top: 0.15rem;
+    align-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  .technique-list li {
+    grid-template-columns: 4.4rem minmax(0, 1fr);
+    align-items: center;
+    gap: 0.2rem 0.7rem;
   }
 
   .technique-list .num {
-    font-size: 1.5rem;
+    font-size: 2.35rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.28);
+    line-height: 1;
+  }
+
+  .technique-list strong {
+    display: block;
+    margin: 0 0 0.18rem;
+    font-size: 1.28rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.1;
   }
 
   .technique-list p {
-    font-size: 0.625rem;
-    line-height: 1.5;
+    display: block;
+    margin: 0;
+    max-width: none;
+    font-size: 0.72rem;
+    line-height: 1.4;
+    opacity: 0.88;
   }
 
   .cta-split {
@@ -3038,6 +3110,16 @@ main > .section.section-lavender:first-of-type {
     min-height: 240px;
     max-height: 260px;
     object-fit: cover;
+  }
+
+  .page-plp .keep-banner .links .keep-icon,
+  .page-pdp .keep-banner .links .keep-icon {
+    width: 34px;
+    height: 34px;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 
   .page-plp .keep-banner .copy,
@@ -4333,7 +4415,8 @@ main > .section.section-lavender:first-of-type {
     text-align: center;
   }
 
-  .pdp-ctas .secondary .btn svg {
+  .pdp-ctas .secondary .btn svg,
+  .pdp-ctas .secondary .btn img {
     width: 16px;
     height: 16px;
   }
@@ -4603,7 +4686,8 @@ main > .section.section-lavender:first-of-type {
     white-space: nowrap;
   }
 
-  .page-pdp .keep-banner .links svg {
+  .page-pdp .keep-banner .links svg,
+  .page-pdp .keep-banner .keep-icon {
     width: 22px;
     height: 22px;
     flex-shrink: 0;
