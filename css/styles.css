@@ -4633,3 +4633,338 @@ main > .section.section-lavender:first-of-type {
     height: 18px;
   }
 }
+
+/* Shared footer on the home, listing, and product pages. */
+.home-footer {
+  background: #403065;
+  padding: 2.6rem 0 0;
+  color: #fff;
+}
+
+.home-footer-grid {
+  display: grid;
+  grid-template-columns: 1.58fr 1.2fr 0.86fr;
+  gap: 0;
+  align-items: stretch;
+  width: min(100% - 4.5rem, 1160px);
+  margin-inline: auto;
+  padding-bottom: 2.15rem;
+}
+
+.home-footer-brand {
+  padding-top: 0.15rem;
+  padding-right: 2rem;
+}
+
+.home-footer-logo {
+  display: block;
+  width: 230px;
+  height: auto;
+  margin: 0 0 1.15rem;
+}
+
+.home-footer-lead {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.home-footer-desc {
+  margin: 0;
+  font-size: 0.74rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.home-footer-desc-m,
+.home-footer-flow {
+  display: none;
+}
+
+.home-footer-badges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100%, 400px);
+  margin-top: 1.55rem;
+}
+
+.home-footer-badges span {
+  border-right: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 0 3rem;
+  text-align: center;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.home-footer-badges span:first-child {
+  padding-left: 0;
+}
+
+.home-footer-badges span:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.home-footer-col {
+  border-left: 1px solid rgba(255, 255, 255, 0.32);
+  padding: 0.45rem 0 0 2.35rem;
+}
+
+.home-footer-col h4 {
+  display: inline-block;
+  margin: 0 0 1.05rem;
+  padding-bottom: 0.42rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.62rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.home-footer-col li span {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+.home-footer-col a:hover {
+  opacity: 0.75;
+}
+
+.home-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 0.85rem max(2.25rem, calc((100% - 1160px) / 2));
+  border-top: 1px solid rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.home-footer-bottom span:last-child {
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-plp .home-footer,
+.page-pdp .home-footer {
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .home-footer-grid {
+    grid-template-columns: 1.75fr 1.12fr 0.8fr;
+  }
+
+  .home-footer-brand {
+    padding-right: 2.4rem;
+  }
+
+  .home-footer-logo {
+    width: 250px;
+    margin-bottom: 1.3rem;
+  }
+
+  .home-footer-lead {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  .home-footer-desc {
+    max-width: none;
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  .home-footer-badges {
+    width: 100%;
+    max-width: none;
+    margin-top: 1.9rem;
+    justify-content: start;
+  }
+
+  .home-footer-badges span {
+    padding: 0 4rem;
+  }
+
+  .page-home .home-footer,
+  .page-plp .home-footer,
+  .page-pdp .home-footer {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+
+  .page-home .home-footer-grid,
+  .page-plp .home-footer-grid,
+  .page-pdp .home-footer-grid {
+    width: calc(100% - 3rem);
+    max-width: none;
+  }
+
+  .page-home .home-footer-bottom,
+  .page-plp .home-footer-bottom,
+  .page-pdp .home-footer-bottom {
+    padding-left: 1.5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .page-home .home-footer.d-only {
+    display: block;
+  }
+
+  .m-footer {
+    display: none;
+  }
+
+  .home-footer {
+    padding: 1.4rem 0 1rem;
+  }
+
+  .page-plp .home-footer,
+  .page-pdp .home-footer {
+    margin-top: 1.5rem;
+  }
+
+  .home-footer-desc-d,
+  .home-footer-col ul.home-footer-list {
+    display: none;
+  }
+
+  .home-footer-desc-m,
+  .home-footer-flow {
+    display: block;
+  }
+
+  .home-footer-grid {
+    display: block;
+    width: min(100% - 2.6rem, 1160px);
+    margin-inline: auto;
+    padding-bottom: 0.2rem;
+  }
+
+  .home-footer-brand {
+    padding: 0;
+  }
+
+  .home-footer-logo {
+    width: 168px;
+    margin: 0.15rem 0 0.95rem;
+  }
+
+  .home-footer-lead {
+    margin: 0 0 0.35rem;
+    font-size: 1.02rem;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  .home-footer-desc {
+    max-width: none;
+    margin: 0 0 1.35rem;
+    font-size: 0.74rem;
+    font-weight: 400;
+    line-height: 1.45;
+  }
+
+  .home-footer-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: 0 0 1.45rem;
+  }
+
+  .home-footer-badges span {
+    padding: 0 0.35rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.25;
+  }
+
+  .home-footer-col {
+    border: 0;
+    margin: 0 0 1.35rem;
+    padding: 0;
+  }
+
+  .home-footer-col h4 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 0.55rem;
+    padding: 0;
+    border-bottom: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .home-footer-col h4::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    margin-left: 0.75rem;
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+  .home-footer-flow {
+    margin: 0;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    line-height: 1.7;
+  }
+
+  .home-footer-flow-links {
+    font-size: 0.64rem;
+    letter-spacing: 0.02em;
+    line-height: 1.75;
+  }
+
+  .home-footer-bottom {
+    display: block;
+    width: min(100% - 2.6rem, 1160px);
+    margin: 0.35rem auto 0;
+    padding: 0;
+    border-top: 0;
+    font-size: 0.62rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .home-footer-bottom span {
+    display: block;
+  }
+
+  .home-footer-bottom span:last-child {
+    font-size: 0.62rem;
+    letter-spacing: 0.03em;
+  }
+}
