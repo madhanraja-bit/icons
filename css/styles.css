@@ -2956,6 +2956,33 @@ main > .section.section-lavender:first-of-type {
     justify-self: end;
   }
 
+  .promise-visual-img {
+    filter: none;
+  }
+
+  .promise-badge {
+    top: 1.5rem;
+    right: 1.65rem;
+    text-align: left;
+    font-family: var(--font-sans);
+    margin-top: 4rem;
+  }
+
+  .promise-badge-num {
+    font-size: 9rem;
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+  }
+
+  .promise-badge-label {
+    margin-top: 0.15rem;
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    line-height: 1.05;
+  }
+
 
   .promise-title {
     font-size: 2.625rem;
@@ -2983,27 +3010,35 @@ main > .section.section-lavender:first-of-type {
     justify-content: center;
   }
 
+  .section-craft {
+    overflow: visible;
+    padding-bottom: 8.5rem;
+  }
+
   .craft-banner {
     width: min(1120px, 100%);
     max-width: 1120px;
     aspect-ratio: auto;
     height: auto;
     margin-inline: auto;
-    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-    gap: 1.25rem 1.5rem;
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    gap: 1rem 1.75rem;
     align-items: stretch;
-    padding: 2.35rem 2.5rem 2.15rem 2.65rem;
-    border-radius: 28px;
+    padding: 2.6rem 2.75rem 2.35rem 2.85rem;
+    border-radius: 26px;
     background: #413066;
     box-sizing: border-box;
-    min-height: 430px;
+    min-height: 500px;
+    overflow: visible;
   }
 
   .craft-ring {
-    left: 25.5%;
+    left: 24%;
     bottom: -86px;
-    width: 276px;
+    width: 300px;
     z-index: 3;
+    transform: rotate(8deg);
+    transform-origin: center center;
   }
 
   .craft-intro {
@@ -3039,28 +3074,32 @@ main > .section.section-lavender:first-of-type {
   }
 
   .craft-feature {
-    margin-top: auto;
+    margin-top: 2rem;
     padding-top: 1.35rem;
     z-index: 4;
     gap: 0.05rem;
+    font-size: 3rem;
   }
 
   .craft-feature-num {
-    font-size: clamp(5.4rem, 7.2vw, 6.6rem);
+    font-family: var(--font-sans);
+    font-size: clamp(8rem, 11vw, 10rem);
     font-weight: 700;
-    letter-spacing: -0.04em;
-    line-height: 0.8;
+    letter-spacing: -0.045em;
+    line-height: 0.78;
   }
 
   .craft-feature-label {
-    font-size: 0.78rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 500;
     letter-spacing: 0.06em;
     line-height: 1.25;
+    margin-top: 0.5rem;
+    font-family: var(--font-sans);
   }
 
   .technique-list {
-    gap: 1.05rem;
+    gap: 1.35rem;
     padding-top: 0.15rem;
     align-content: space-between;
     position: relative;
@@ -3074,16 +3113,16 @@ main > .section.section-lavender:first-of-type {
   }
 
   .technique-list .num {
-    font-size: 2.35rem;
+    font-size: 2.65rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.28);
+    color: rgba(255, 255, 255, 0.24);
     line-height: 1;
   }
 
   .technique-list strong {
     display: block;
-    margin: 0 0 0.18rem;
-    font-size: 1.28rem;
+    margin: 0 0 0.2rem;
+    font-size: 1.45rem;
     font-weight: 700;
     letter-spacing: 0;
     text-transform: none;
@@ -4087,37 +4126,44 @@ main > .section.section-lavender:first-of-type {
     margin: 0.55rem 1.25rem 1.35rem;
     border-radius: 18px;
     overflow: hidden;
-    min-height: 250px;
-    background: #111;
+    aspect-ratio: 620 / 590;
+    background: #1a1a1a;
   }
 
-  .m-silver svg {
+  .m-silver-img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) contrast(1.06);
   }
 
   .m-silver-copy {
     position: absolute;
-    right: 7%;
-    top: 34%;
+    right: 6%;
+    top: 7%;
     text-align: left;
-    line-height: 0.95;
+    line-height: 0.9;
+    color: #fff;
   }
 
   .m-925 {
     margin: 0;
-    font-size: 3.35rem;
-    font-weight: 700;
+    font-family: var(--font-sans);
+    font-size: 5.7rem;
+    font-weight: 800;
     letter-spacing: 0.01em;
+    line-height: 0.9;
   }
 
   .m-silver-copy p:last-child {
-    margin: 0.15rem 0 0;
-    font-size: 1rem;
+    margin: 0.2rem 0 0;
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
-    line-height: 1.15;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
     text-transform: uppercase;
   }
 
