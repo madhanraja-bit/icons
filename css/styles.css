@@ -4712,7 +4712,8 @@ main > .section.section-lavender:first-of-type {
 
 .home-footer-col {
   border-left: 1px solid rgba(255, 255, 255, 0.32);
-  padding: 0.45rem 0 0 2.35rem;
+  padding: 2rem 2rem 2rem 5rem;
+  margin-left:-10rem;
 }
 
 .home-footer-col h4 {
@@ -4936,14 +4937,14 @@ main > .section.section-lavender:first-of-type {
 
   .home-footer-flow {
     margin: 0;
-    font-size: 0.62rem;
+    font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.005em;
     line-height: 1.7;
   }
 
   .home-footer-flow-links {
-    font-size: 0.64rem;
+    font-size: 0.8rem;
     letter-spacing: 0.02em;
     line-height: 1.75;
   }
