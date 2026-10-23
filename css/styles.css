@@ -33,7 +33,10 @@
   --accent-off: #c8d96a;
   --radius: 14px;
   --radius-sm: 10px;
-  --header-h: 96px;
+  --header-h: 136px;
+  --header-logo-gap: 42px;
+  --header-utility-row-h: 48px;
+  --header-nav-pad-bottom: 0.85rem;
   --font-sans: "Montserrat", system-ui, sans-serif;
   --font-script: "Great Vibes", cursive;
   --font-serif: "Cormorant Garamond", Georgia, serif;
@@ -139,8 +142,8 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  min-height: 56px;
-  padding: 0.55rem 1rem;
+  min-height: 66px;
+  padding: 0.6rem 1rem 0.65rem;
   width: 100%;
   margin-inline: auto;
 }
@@ -349,6 +352,13 @@ button {
   padding: 2rem 1rem;
 }
 
+.hero-content .m-chandra-logo {
+  display: block;
+  width: min(320px, 38vw);
+  height: auto;
+  margin: 0 auto 0.35rem;
+}
+
 .brand-script {
   font-family: var(--font-script);
   font-size: clamp(3rem, 8vw, 5.5rem);
@@ -365,9 +375,10 @@ button {
 }
 
 .hero-title {
-  margin: 0;
-  font-size: clamp(1.4rem, 4vw, 2.4rem);
-  letter-spacing: 0.12em;
+  margin: 1.65rem 0 0;
+  font-size: clamp(2.25rem, 6.5vw, 4rem);
+  letter-spacing: 0.1em;
+  line-height: 1.08;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -2716,13 +2727,19 @@ main > .section.section-lavender:first-of-type {
     display: none;
   }
 
+  .site-header {
+    box-sizing: border-box;
+  }
+
   .header-grid {
     display: grid;
     grid-template-columns: minmax(118px, auto) minmax(0, 1fr);
-    grid-template-rows: 40px minmax(0, 1fr);
+    grid-template-rows: var(--header-utility-row-h) minmax(0, 1fr);
     align-items: stretch;
     height: var(--header-h);
     width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 0.4rem;
   }
 
   .header-grid > .logo {
@@ -2730,7 +2747,7 @@ main > .section.section-lavender:first-of-type {
     grid-row: 1 / -1;
     align-self: center;
     justify-self: start;
-    padding: 0.15rem 0.85rem 0.15rem clamp(1.15rem, 2.8vw, 2.5rem);
+    padding: 0.75rem 0.85rem 0.8rem clamp(1.15rem, 2.8vw, 2.5rem);
     position: relative;
     z-index: 2;
   }
@@ -2742,8 +2759,8 @@ main > .section.section-lavender:first-of-type {
   .header-grid > .logo img,
   .header-grid > .logo .logo-img {
     width: auto;
-    height: 86px;
-    max-height: calc(var(--header-h) - 8px);
+    height: 78px;
+    max-height: calc(var(--header-h) - var(--header-logo-gap));
   }
 
   .header-right-stack {
@@ -2754,15 +2771,20 @@ main > .section.section-lavender:first-of-type {
     align-self: start;
     width: var(--header-utility-w);
     max-width: calc(100% - var(--header-edge-right) - 1rem);
-    margin-right: var(--header-edge-right);
+    margin: 0 var(--header-edge-right) 0 0;
     margin-right: 128px;
-    
   }
 
   .header-utility {
     display: flex;
+    align-items: center;
+    min-height: var(--header-utility-row-h);
+    padding-top: 0;
+    padding-bottom: 0.35rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     border-bottom-right-radius: 25px;
-    margin-right:2px;
+    margin-right: 2px;
   }
 
   .header-grid > .nav-desktop {
@@ -2773,7 +2795,7 @@ main > .section.section-lavender:first-of-type {
     justify-content: flex-start;
     align-self: end;
     min-width: 0;
-    padding: 0 var(--header-edge-right) 0.45rem var(--header-nav-inset-left);
+    padding: 0.45rem var(--header-edge-right) var(--header-nav-pad-bottom) var(--header-nav-inset-left);
     gap: 0 1rem;
     overflow-x: auto;
     margin-left: 293px;
@@ -3599,7 +3621,8 @@ main > .section.section-lavender:first-of-type {
 
   .header-grid > .logo img,
   .header-grid > .logo .logo-img {
-    height: 88px;
+    height: 82px;
+    max-height: calc(var(--header-h) - var(--header-logo-gap));
   }
 }
 
@@ -3773,8 +3796,8 @@ main > .section.section-lavender:first-of-type {
     display: grid;
     grid-template-columns: 2.6rem 1fr 2.6rem;
     align-items: center;
-    min-height: 74px;
-    padding: 0.35rem 0.55rem;
+    min-height: 86px;
+    padding: 0.6rem 0.55rem 0.65rem;
   }
 
   .page-home .header-inner .logo {
@@ -3783,10 +3806,31 @@ main > .section.section-lavender:first-of-type {
   }
 
   .page-home .header-inner .logo-img {
-    height: 58px;
+    height: 56px;
   }
 
   .page-home .menu-toggle {
+    grid-column: 1;
+    justify-self: start;
+    padding: 0.2rem;
+  }
+
+  .page-plp .header-inner,
+  .page-pdp .header-inner {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr 2.6rem;
+    align-items: center;
+    justify-content: unset;
+  }
+
+  .page-plp .header-inner .logo,
+  .page-pdp .header-inner .logo {
+    grid-column: 2;
+    justify-content: center;
+  }
+
+  .page-plp .menu-toggle,
+  .page-pdp .menu-toggle {
     grid-column: 1;
     justify-self: start;
     padding: 0.2rem;
@@ -3862,12 +3906,11 @@ main > .section.section-lavender:first-of-type {
     padding: 0 1rem 0.4rem;
   }
 
-  .m-hero .m-script {
-    margin: 0;
-    font-family: var(--font-script);
-    font-size: clamp(3rem, 13vw, 4.1rem);
-    line-height: 0.78;
-    font-weight: 400;
+  .m-hero .m-chandra-logo {
+    display: block;
+    width: min(68vw, 200px);
+    height: auto;
+    margin: 0 auto;
   }
 
   .m-hero .m-tag {
@@ -3881,11 +3924,11 @@ main > .section.section-lavender:first-of-type {
   }
 
   .m-hero h1 {
-    margin: 0;
-    font-size: clamp(1.55rem, 7.4vw, 2.05rem);
+    margin: 1.35rem 0 0;
+    font-size: clamp(1.72rem, 8.2vw, 2.45rem);
     font-weight: 700;
-    letter-spacing: 0.045em;
-    line-height: 1.02;
+    letter-spacing: 0.06em;
+    line-height: 1.06;
     text-transform: uppercase;
   }
 
@@ -4298,11 +4341,11 @@ main > .section.section-lavender:first-of-type {
     padding: 1.7rem 1.25rem 1.15rem;
   }
 
-  .m-footer .m-script {
-    margin: 0;
-    font-family: var(--font-script);
-    font-size: 3.35rem;
-    line-height: 0.8;
+  .m-footer .m-chandra-logo {
+    display: block;
+    width: min(72vw, 230px);
+    height: auto;
+    margin: 0 0 0.15rem;
   }
 
   .m-foot-tag {
