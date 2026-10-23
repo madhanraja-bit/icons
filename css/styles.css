@@ -1098,6 +1098,7 @@ main > .section.section-lavender:first-of-type {
   width: 22px;
   height: 22px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .keep-banner {
@@ -1373,11 +1374,14 @@ main > .section.section-lavender:first-of-type {
 
 .page-plp .keep-banner .links svg,
 .page-plp .keep-banner .keep-icon,
-.page-pdp .keep-banner .links svg {
+.page-pdp .keep-banner .links svg,
+.page-pdp .keep-banner .keep-icon {
   width: 34px;
   height: 34px;
   flex-shrink: 0;
   stroke-width: 1.7;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 899px) {
@@ -2356,8 +2360,16 @@ main > .section.section-lavender:first-of-type {
   height: 42px;
   margin-bottom: 0.55rem;
   border-radius: 50%;
-  background: #403061;
+  background: #3a2758;
   color: #fff;
+  isolation: isolate;
+}
+
+.assure-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  mix-blend-mode: lighten;
 }
 
 .assure-icon svg {
@@ -4176,6 +4188,7 @@ main > .section.section-lavender:first-of-type {
     width: 22px;
     height: 22px;
     flex-shrink: 0;
+    object-fit: contain;
   }
 
   .m-btn-fill {
@@ -4421,6 +4434,11 @@ main > .section.section-lavender:first-of-type {
     margin-bottom: 0.7rem;
   }
 
+  .assure-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
   .assure-icon svg {
     width: 24px;
     height: 24px;
@@ -4603,10 +4621,13 @@ main > .section.section-lavender:first-of-type {
     white-space: nowrap;
   }
 
-  .page-pdp .keep-banner .links svg {
+  .page-pdp .keep-banner .links svg,
+  .page-pdp .keep-banner .keep-icon {
     width: 22px;
     height: 22px;
     flex-shrink: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 
   .pdp-top-row {
