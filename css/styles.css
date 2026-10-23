@@ -3822,72 +3822,31 @@ main > .section.section-lavender:first-of-type {
 
   .m-hero {
     position: relative;
-    height: 49vw;
-    min-height: 176px;
-    max-height: 250px;
+    width: 100%;
     overflow: hidden;
     background: #0d061c;
-    display: grid;
-    place-items: center;
     text-align: center;
+    line-height: 0;
   }
 
-  .m-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 50% 46%, transparent 36%, rgba(8, 2, 20, 0.72) 78%);
-    pointer-events: none;
-  }
-
-  .m-moon {
-    position: absolute;
-    width: 128%;
-    aspect-ratio: 1;
-    left: 50%;
-    top: -18%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    background:
-      radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.34) 0%, rgba(214, 196, 245, 0.16) 14%, transparent 30%),
-      radial-gradient(circle at 50% 42%, #d2c2ee 0%, #8d72c0 20%, #5b418f 46%, #2d185c 72%, #120820 100%);
-    box-shadow: inset 0 -36px 50px rgba(8, 0, 24, 0.4);
-  }
-
-  .m-skyline {
-    position: absolute;
-    left: 8%;
-    right: 8%;
-    bottom: 24%;
-    width: 84%;
-    height: 26%;
-    opacity: 0.28;
-  }
-
-  .m-sparkles {
-    position: absolute;
-    left: 28%;
-    bottom: 16%;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow:
-      14px 4px 0 0 #fff,
-      34px -3px 0 -0.4px #f4eeff,
-      58px 7px 0 0 #fff,
-      86px 1px 0 -0.5px #fff,
-      112px 8px 0 0 #fff,
-      22px 12px 0 -1px #efe7ff,
-      74px 13px 0 -0.6px #fff,
-      132px -2px 0 0 #fff;
-    filter: drop-shadow(0 0 4px rgba(220, 200, 255, 0.95));
+  .m-hero-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 512 / 569;
+    object-fit: cover;
+    object-position: center;
   }
 
   .m-hero-copy {
-    position: relative;
+    position: absolute;
     z-index: 2;
-    padding: 0 1rem 0.4rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
 
   .m-hero .m-chandra-logo {
