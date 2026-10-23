@@ -2752,10 +2752,6 @@ main > .section.section-lavender:first-of-type {
     z-index: 2;
   }
 
-  .page-pdp .header-grid > .logo {
-    padding-left: clamp(2.75rem, 4.6vw, 4.35rem);
-  }
-
   .header-grid > .logo img,
   .header-grid > .logo .logo-img {
     width: auto;
@@ -3792,43 +3788,31 @@ main > .section.section-lavender:first-of-type {
     position: relative;
   }
 
-  .page-home .header-inner {
-    display: grid;
-    grid-template-columns: 2.6rem 1fr 2.6rem;
-    align-items: center;
-    min-height: 86px;
-    padding: 0.6rem 0.55rem 0.65rem;
-  }
-
-  .page-home .header-inner .logo {
-    grid-column: 2;
-    justify-content: center;
-  }
-
-  .page-home .header-inner .logo-img {
-    height: 56px;
-  }
-
-  .page-home .menu-toggle {
-    grid-column: 1;
-    justify-self: start;
-    padding: 0.2rem;
-  }
-
+  .page-home .header-inner,
   .page-plp .header-inner,
   .page-pdp .header-inner {
     display: grid;
     grid-template-columns: 2.6rem 1fr 2.6rem;
     align-items: center;
+    min-height: 86px;
+    padding: 0.6rem 0.55rem 0.65rem;
     justify-content: unset;
   }
 
+  .page-home .header-inner .logo,
   .page-plp .header-inner .logo,
   .page-pdp .header-inner .logo {
     grid-column: 2;
     justify-content: center;
   }
 
+  .page-home .header-inner .logo-img,
+  .page-plp .header-inner .logo-img,
+  .page-pdp .header-inner .logo-img {
+    height: 56px;
+  }
+
+  .page-home .menu-toggle,
   .page-plp .menu-toggle,
   .page-pdp .menu-toggle {
     grid-column: 1;
